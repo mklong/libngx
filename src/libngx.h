@@ -1,23 +1,23 @@
 /** 
- * @file	libngx.h
- * @brief	
- *		based on nginx core (Igor Sysoev Nginx, Inc)
- * detail...
- *	    nginx core data structure 
- *
- * @author	mklong
- * @version	1.0
- * @date	2014/11/17
- * 
- * @see		
- * 
- * <b>History:</b><br>
- * <table>
- *  <tr> <th>Version	<th>Date		<th>Author	<th>Notes</tr>
- *  <tr> <td>1.0		<td>2014/11/17	<td>mklong	<td>Create this file</tr>
- * </table>
- * 
- */
+* @file	libngx.h
+* @brief	
+*		based on nginx core (Igor Sysoev Nginx, Inc)
+* detail...
+*	    nginx core data structure 
+*
+* @author	mklong
+* @version	1.0
+* @date	2014/11/17
+* 
+* @see		
+* 
+* <b>History:</b><br>
+* <table>
+*  <tr> <th>Version	<th>Date		<th>Author	<th>Notes</tr>
+*  <tr> <td>1.0		<td>2014/11/17	<td>mklong	<td>Create this file</tr>
+* </table>
+* 
+*/
 #ifndef __LIBNGX_H__
 #define __LIBNGX_H__
 
@@ -90,11 +90,11 @@ extern "C" {
 #define CR     (u_char) 13
 #define CRLF   "\x0d\x0a"
 
-//avoid cast
+	//avoid cast
 #ifdef NGX_USE_UCHAR
-	typedef unsigned char		u_char;
+typedef unsigned char		u_char;
 #else
-	typedef char		u_char;
+typedef char		u_char;
 #endif
 
 typedef intptr_t					ngx_int_t;
@@ -106,14 +106,14 @@ typedef unsigned long		u_long;
 
 
 #ifdef WIN32
-	typedef int						ngx_pid_t;
+	typedef int	ngx_pid_t;
 #else
-	typedef pid_t						ngx_pid_t;
+typedef pid_t		ngx_pid_t;
 #endif
 
 #ifdef WIN32
-	typedef size_t ssize_t;
-	typedef long off_t;
+typedef size_t ssize_t;
+typedef long off_t;
 #endif 
 
 extern size_t ngx_pagesize;
