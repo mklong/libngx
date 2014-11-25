@@ -38,7 +38,7 @@ extern "C" {
 #ifdef WIN32
 
 #define ngx_cdecl		__cdecl
-#define ngx_inline     __inline
+#define ngx_inline		__inline
 #else
 
 #define ngx_cdecl
@@ -97,18 +97,18 @@ typedef unsigned char		u_char;
 typedef char		u_char;
 #endif
 
-typedef intptr_t					ngx_int_t;
-typedef uintptr_t				ngx_uint_t;
-typedef int						ngx_flag_t;
-typedef unsigned short		u_short;
-typedef unsigned int			u_int;
-typedef unsigned long		u_long;
+typedef intptr_t		ngx_int_t;
+typedef uintptr_t		ngx_uint_t;
+typedef int				ngx_flag_t;
+typedef unsigned short	u_short;
+typedef unsigned int	u_int;
+typedef unsigned long	u_long;
 
 
 #ifdef WIN32
-	typedef int	ngx_pid_t;
+typedef int	ngx_pid_t;
 #else
-typedef pid_t		ngx_pid_t;
+typedef pid_t	ngx_pid_t;
 #endif
 
 #ifdef WIN32
