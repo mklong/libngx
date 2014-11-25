@@ -29,10 +29,7 @@ extern "C" {
 #include <stdlib.h>
 #include <stdint.h>
 #include <stdarg.h>
-
-#ifdef WIN32
 #include <string.h>
-#endif
 
 
 #ifdef WIN32
@@ -91,10 +88,12 @@ extern "C" {
 #define CRLF   "\x0d\x0a"
 
 	//avoid cast
+#ifdef WIN32
 #ifdef NGX_USE_UCHAR
 typedef unsigned char		u_char;
 #else
 typedef char		u_char;
+#endif
 #endif
 
 typedef intptr_t		ngx_int_t;
